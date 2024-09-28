@@ -1,0 +1,13 @@
+6.1
+-ấn cancel thì s nhận giá trị của No do ta không thiết lập lựa chọn
+-Object[] options = {"I do", "I don't"};
+         int option = JOptionPane.showOptionDialog(
+                 null,
+                 "Do you want to change to first class ticket?",
+                 "Ticket Upgrade",
+                 JOptionPane.YES_NO_OPTION,
+                 JOptionPane.QUESTION_MESSAGE,
+                 null,
+                 options,
+                 options[0]
+         );
