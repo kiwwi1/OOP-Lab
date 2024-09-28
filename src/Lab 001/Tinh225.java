@@ -1,7 +1,6 @@
 import javax.swing.*;
-import java.util.Scanner;
-import java.io.*;
-public class Main {
+
+public class Tinh225 {
     public static void main(String[] args) {
         String Num1 = JOptionPane.showInputDialog("Enter number 1 : ");
         String Num2 = JOptionPane.showInputDialog("Enter number 2 : ");

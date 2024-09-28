@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class DaysInMonth64 {
 
-    // Array for storing the number of days in each month for a common year
     private static final int[] daysInMonth = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
     public static void main(String[] args) {
@@ -10,7 +9,6 @@ public class DaysInMonth64 {
         int month = -1;
         int year = -1;
 
-        // Loop until valid month is entered
         while (month == -1) {
             System.out.print("Enter the month (full name, abbreviation, or number): ");
             String monthInput = scanner.nextLine();
@@ -20,7 +18,6 @@ public class DaysInMonth64 {
             }
         }
 
-        // Loop until valid year is entered
         while (year == -1) {
             System.out.print("Enter the year (non-negative integer): ");
             String yearInput = scanner.nextLine();
@@ -30,12 +27,10 @@ public class DaysInMonth64 {
             }
         }
 
-        // Calculate and display the number of days in the month
         int days = getDaysInMonth(month, year);
         System.out.println("Number of days in " + getMonthName(month) + " " + year + ": " + days);
     }
 
-    // Method to parse the month from various formats
     public static int parseMonth(String input) {
         input = input.trim().toLowerCase();
         switch (input) {
@@ -55,25 +50,22 @@ public class DaysInMonth64 {
         }
     }
 
-    // Method to parse the year (must be a valid non-negative integer)
     public static int parseYear(String input) {
         try {
             int year = Integer.parseInt(input);
-            return year >= 0 ? year : -1; // Valid if non-negative
+            return year >= 0 ? year : -1;
         } catch (NumberFormatException e) {
-            return -1; // Invalid year input
+            return -1;
         }
     }
 
-    // Method to get the number of days in the given month and year
     public static int getDaysInMonth(int month, int year) {
         if (month == 2 && isLeapYear(year)) {
-            return 29; // February in a leap year
+            return 29;
         }
         return daysInMonth[month - 1];
     }
 
-    // Method to check if the given year is a leap year
     public static boolean isLeapYear(int year) {
         if (year % 4 == 0) {
             if (year % 100 == 0) {
@@ -84,7 +76,6 @@ public class DaysInMonth64 {
         return false;
     }
 
-    // Method to get the full name of a month given its number
     public static String getMonthName(int month) {
         String[] months = {
                 "January", "February", "March", "April", "May", "June",
