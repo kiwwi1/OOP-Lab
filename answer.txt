@@ -1,0 +1,2 @@
+6.1
+-ấn cancel thì s nhận giá trị của No do ta không thiết lập lựa chọn
